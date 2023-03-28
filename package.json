@@ -2,5 +2,24 @@
   "dependencies": {
     "express-handlebars": "^7.0.4",
     "mysql2": "^3.2.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "module-14",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saulwade/tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saulwade/tech-blog/issues"
+  },
+  "homepage": "https://github.com/saulwade/tech-blog#readme",
+  "description": ""
 }
