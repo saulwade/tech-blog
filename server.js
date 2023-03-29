@@ -11,7 +11,6 @@ const SQLStore = require('connect-session-sequelize')(webSession.Store);
 const appInstance = webApp();
 const appPort = process.env.PORT || 3001;
 
-// Initialize Handlebars.js engine with custom utility functions
 const hbsConfiguration = hbsEngine.create({ helpers: utilityFunctions });
 
 const sessionOptions = {
@@ -30,7 +29,6 @@ const sessionOptions = {
 
 appInstance.use(webSession(sessionOptions));
 
-// Define the template engine for the web application
 appInstance.engine('handlebars', hbsConfiguration.engine);
 appInstance.set('view engine', 'handlebars');
 
