@@ -14,18 +14,19 @@ const appPort = process.env.PORT || 3001;
 const hbsConfiguration = hbsEngine.create({ helpers: utilityFunctions });
 
 const sessionOptions = {
-  secret: 'Top secret passphrase',
-  cookie: {
-    // Set the session to expire in 50 minutes
-    expire: 20 * 60 * 1000
-  },
-  resave: true,
-  rolling: true,
-  saveUninitialized: true,
-  store: new SQLStore({
-    db: dbConnection
-  })
-};
+    secret: 'Top secret passphrase',
+    cookie: {
+      // Set the session to expire in 50 minutes
+      maxAge: 20 * 60 * 1000
+    },
+    resave: true,
+    rolling: true,
+    saveUninitialized: true,
+    store: new SQLStore({
+      db: dbConnection
+    })
+  };
+  
 
 appInstance.use(webSession(sessionOptions));
 
