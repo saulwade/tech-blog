@@ -9,4 +9,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/login', (req, res) => {
+    res.render('login'); // Ensure you have a 'login' view in your views directory
+  });
+
 module.exports = router;
